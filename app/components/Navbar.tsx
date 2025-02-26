@@ -14,10 +14,10 @@ export default function Navbar() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <div className="flex items-center gap-2">
+                <span className="text-[#00ff80] font-medium text-lg">Green pill</span>
                 <div className="bg-[#00ff80]/10 p-2 rounded-xl">
-                  <Leaf className="h-6 w-6 text-[#00ff80]" />
+                  🥒
                 </div>
-                <span className="text-[#00ff80] font-medium text-lg">Greenpill</span>
               </div>
             </div>
             <div className="hidden md:block">

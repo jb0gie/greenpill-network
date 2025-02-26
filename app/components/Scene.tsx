@@ -6,6 +6,8 @@ import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import Earth from "./Earth";
 import Stars from "./Stars";
 import Particles from "./Particles";
+import { Model } from './Pill'
+
 
 export default function Scene() {
   return (
@@ -17,7 +19,8 @@ export default function Scene() {
         <Suspense fallback={null}>
           <Stars />
           <Particles />
-          <Earth />
+          {/* <Earth /> */}
+          <Model />
         </Suspense>
 
         <ambientLight intensity={0.5} />

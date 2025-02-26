@@ -1,12 +1,9 @@
 import Scene from "./components/Scene";
-import Navbar from "./components/Navbar";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#001810] to-[#003020]">
-      <Navbar />
-      
       <div className="relative">
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="text-center space-y-8 px-4 max-w-4xl mx-auto">

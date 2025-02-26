@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,19 +14,27 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <div className="flex items-center gap-2">
+              <Link href="/" className="flex items-center gap-2">
                 <span className="text-[#00ff80] font-medium text-lg">Green pill</span>
                 <div className="bg-[#00ff80]/10 p-2 rounded-xl">
                   🥒
                 </div>
-              </div>
+              </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-2">
-                <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">Home</Button>
-                <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">About</Button>
-                <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">Network</Button>
-                <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">Contact</Button>
+                <Link href="/">
+                  <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">Home</Button>
+                </Link>
+                <Link href="/about">
+                  <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">About</Button>
+                </Link>
+                <Link href="/network">
+                  <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">Network</Button>
+                </Link>
+                <Link href="/contact">
+                  <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">Contact</Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -50,18 +59,26 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-[#001810]/95 backdrop-blur-md border-t border-[#00ff80]/10">
           <div className="px-4 pt-2 pb-3 space-y-1">
-            <Button variant="ghost" className="w-full justify-start text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg">
-              Home
-            </Button>
-            <Button variant="ghost" className="w-full justify-start text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg">
-              About
-            </Button>
-            <Button variant="ghost" className="w-full justify-start text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg">
-              Network
-            </Button>
-            <Button variant="ghost" className="w-full justify-start text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg">
-              Contact
-            </Button>
+            <Link href="/" className="block">
+              <Button variant="ghost" className="w-full justify-start text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg">
+                Home
+              </Button>
+            </Link>
+            <Link href="/about" className="block">
+              <Button variant="ghost" className="w-full justify-start text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg">
+                About
+              </Button>
+            </Link>
+            <Link href="/network" className="block">
+              <Button variant="ghost" className="w-full justify-start text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg">
+                Network
+              </Button>
+            </Link>
+            <Link href="/contact" className="block">
+              <Button variant="ghost" className="w-full justify-start text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg">
+                Contact
+              </Button>
+            </Link>
             <div className="pt-2">
               <Button className="w-full bg-[#00ff80] hover:bg-[#00ff80]/90 text-[#001810] font-medium rounded-full">
                 Get Started

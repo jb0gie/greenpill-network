@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Greenpill Network',
-  description: 'Building a sustainable future through global collaboration and innovation',
+  description: 'degen => regen',
 };
 
 export default function RootLayout({

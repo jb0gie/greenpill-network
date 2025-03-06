@@ -23,25 +23,24 @@ export default function Navbar() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-2">
-                <Link href="/">
-                  <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">Home</Button>
+                <Link href="#learn">
+                  <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">Learn</Button>
                 </Link>
-                <Link href="/about">
-                  <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">About</Button>
+                <Link href="#participate">
+                  <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">Participate</Button>
                 </Link>
-                <Link href="/network">
-                  <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">Network</Button>
-                </Link>
-                <Link href="/contact">
-                  <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">Contact</Button>
+                <Link href="#explore">
+                  <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">Explore</Button>
                 </Link>
               </div>
             </div>
           </div>
           <div className="hidden md:block">
-            <Button className="bg-[#00ff80] hover:bg-[#00ff80]/90 text-[#001810] font-medium rounded-full px-6">
-              Get Started
-            </Button>
+            <Link href="https://app.charmverse.io/greenpill-network/home-747068948032567" target="_blank">
+              <Button className="bg-[#00ff80] hover:bg-[#00ff80]/90 text-[#001810] font-medium rounded-full px-6">
+                Get Started
+              </Button>
+            </Link>
           </div>
           <div className="md:hidden">
             <Button
@@ -59,30 +58,22 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-[#001810]/95 backdrop-blur-md border-t border-[#00ff80]/10">
           <div className="px-4 pt-2 pb-3 space-y-1">
-            <Link href="/" className="block">
-              <Button variant="ghost" className="w-full justify-start text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg">
-                Home
-              </Button>
+            <Link href="#learn">
+              <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">Learn</Button>
             </Link>
-            <Link href="/about" className="block">
-              <Button variant="ghost" className="w-full justify-start text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg">
-                About
-              </Button>
+            <Link href="#participate">
+              <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">Participate</Button>
             </Link>
-            <Link href="/network" className="block">
-              <Button variant="ghost" className="w-full justify-start text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg">
-                Network
-              </Button>
-            </Link>
-            <Link href="/contact" className="block">
-              <Button variant="ghost" className="w-full justify-start text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg">
-                Contact
-              </Button>
+            <Link href="#explore">
+              <Button variant="ghost" className="text-[#80ffa0] hover:text-[#00ff80] hover:bg-[#00ff80]/10 rounded-lg px-4">Explore</Button>
             </Link>
             <div className="pt-2">
-              <Button className="w-full bg-[#00ff80] hover:bg-[#00ff80]/90 text-[#001810] font-medium rounded-full">
-                Get Started
-              </Button>
+              <Link href="https://app.charmverse.io/greenpill-network/home-747068948032567" target="_blank">
+                <Button className="w-full bg-[#00ff80] hover:bg-[#00ff80]/90 text-[#001810] font-medium rounded-full">
+                  Get Started
+                </Button>
+              </Link>
+
             </div>
           </div>
         </div>

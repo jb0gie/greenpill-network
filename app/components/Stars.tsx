@@ -5,7 +5,7 @@ import { useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as random from "maath/random";
 
-export default function Stars({ count = 1000 }) {
+export default function Stars({ count = 420 }) {
   const [sphere] = useState(() => random.inSphere(new Float32Array(count * 3), { radius: 2.5 }));
   const starsRef = useRef<THREE.Points>(null);
 
@@ -21,7 +21,7 @@ export default function Stars({ count = 1000 }) {
       <Points ref={starsRef} positions={sphere} stride={3} frustumCulled={false}>
         <PointMaterial
           transparent
-          color="#80ffa0"
+
           size={0.008}
           sizeAttenuation={true}
           depthWrite={false}
